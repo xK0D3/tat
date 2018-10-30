@@ -1,11 +1,5 @@
-
-
-
-
-
-
-    foab = 'Fun On A Bun?'
-    print(foab)
+foab = 'Fun On A Bun?'
+print(foab)
 
 
 
