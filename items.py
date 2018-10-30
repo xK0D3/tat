@@ -17,3 +17,4 @@ class GoldCoin(Item):
         super().__init__(name = 'Gold Coin',
                          description = 'A round coin with a {} stamped on the front.'.format(str(self.amount)),
                          value = self.amount)
+                         
