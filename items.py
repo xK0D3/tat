@@ -37,3 +37,6 @@ class Dagger(Weapon):
                          description = 'A rusted dagger that might still be a viable stabbing machine.',
                          value = 10,
                          damage = 8)
+       
+#School Test
+        
