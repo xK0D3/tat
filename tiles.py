@@ -40,6 +40,16 @@ class EnemyRoom(MapTile):
         if self.enemy.isAlive():
             player.hp -= self.enemy.damage
             print('The {} does {} damage. You have {} HP remaining.'.format(self.enemy, self.enemy.damage, player.hp))
+class WinRoom(MapTile):
+    def introText(self):
+        return '''
+        You see a light, a way out of the jungle!
+
+        You Win!
+        '''
+    def modifyPlayer(self, player):
+        # No room action #
+        pass
 
 class DarkPath(MapTile):
     def introText(self):
@@ -89,7 +99,7 @@ class GooderPath(EnemyRoom):
     def introText(self):
         if self.enemy.isAlive():
             return '''
-            You spot a malformed humanoid charging at you from out of nowhere!
+            You spot a malformed humanoid charging at you from out of nowhere! It seems to be infuriated by something; heavily bleeding from multiple stab wounds.
             '''
         else:
             return '''
@@ -163,4 +173,10 @@ class DaggerPath(LootRoom):
         He jumps in surprise, dropping the dagger. He looks up at you with pure shame, and runs away.
         It looks like you just got yourself a brand new rusted dagger!
         '''
-
+class GunPath(LootRoom):
+    def __init__(self, x, y):
+        super().__init__(x, y, items.Gun())
+    def introText(self):
+        return '''
+        Oh shit, a gun.
+        '''

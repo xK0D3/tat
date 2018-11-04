@@ -37,6 +37,11 @@ class Dagger(Weapon):
                          description = 'A rusted dagger that might still be a viable stabbing machine.',
                          value = 10,
                          damage = 8)
-       
+class Gun(Weapon):
+    def __init__(self):
+        super().__init__(name = 'Gun',
+                         description = 'A suspicious looking loaded gun, lying out in the open.',
+                         value = 50,
+                         damage = 50)
 #School Test
         
